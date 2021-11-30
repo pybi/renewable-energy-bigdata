@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "files": [
+        "resources/ts/app.ts",
+        "resources/ts/editing.ts",
+        "resources/ts/start.ts"
+    ]
+}
