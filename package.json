@@ -1,17 +1,31 @@
 {
-  "name": " ",
-  "version": "0.0.1",
-  "description": "",
-  "keywords": "",
-  "license": "",
-  "author": "",
-  "scripts": {
-    "build": "parcel build index.html",
-    "dev": "parcel index.html --open",
-    "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4"
-  }
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "axios": "^0.21.4",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14",
+        "resolve-url-loader": "^4.0.0",
+        "sass": "^1.38.1",
+        "sass-loader": "^12.1.0",
+        "ts-loader": "^9.2.5",
+        "typescript": "^4.3.5"
+    },
+    "dependencies": {
+        "@popperjs/core": "^2.9.3",
+        "@types/dropzone": "^5.7.4",
+        "bootstrap": "^5.1.0",
+        "dropzone": "^5.9.2",
+        "jquery": "^3.6.0",
+        "ts-node": "^10.2.1"
+    }
 }
