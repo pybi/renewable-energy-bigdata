@@ -6,10 +6,6 @@ body {
   font-weight: 400;
 }
 
-.mainWrapper {
-  margin: 50px;
-}
-
 h1 {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
@@ -21,11 +17,34 @@ canvas{
 }
 
 .chartWrapper{
-  width:90%;
+  width:100%;
   display:block;
   overflow:hidden;
   margin:0 auto;
-  padding: 60px 50px;
   background:#fff;
   border-radius:4px;
+}
+
+.skewedSplitter {
+  position: absolute;
+  top: 30vh;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  background: #3D8B37;
+  z-index: 0;
+  -webkit-transform: skewY(4deg);
+  transform: skewY(4deg);
+  -webkit-transform-origin: top right;
+  transform-origin: top right;
+}
+
+.entryText {
+  background: #3D8B37;
+}
+
+.headerBgImage {
+  background-image: url('https://images.unsplash.com/photo-1548337138-e87d889cc369?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2392&q=80');
 }

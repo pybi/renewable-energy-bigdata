@@ -1,0 +1,34 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700;400&display=swap');
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
+.mainWrapper {
+  margin: 50px;
+}
+
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+}
+
+canvas{
+  background:#fff;
+  height:400px;
+}
+
+.chartWrapper{
+  width:90%;
+  display:block;
+  overflow:hidden;
+  margin:0 auto;
+  padding: 60px 50px;
+  background:#fff;
+  border-radius:4px;
+}
+
+
+/*# sourceMappingURL=/custom.59417457.css.map */
