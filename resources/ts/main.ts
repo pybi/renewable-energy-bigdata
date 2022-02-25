@@ -1,4 +1,4 @@
-import * as $ from 'jquery';
+    import * as $ from 'jquery';
 import Chart from 'chart.js/auto';
 let _ = require('lodash');
 import {data} from "jquery";
@@ -6,6 +6,7 @@ import {EnergyProductionChart} from "./config/EnergyProductionChart";
 import {DataService} from "./DataService";
 import {EnergyChart} from "./config/EnergyChart";
 import {Utils} from "./Utils";
+    import {EnergyTableChart} from "./config/EnergyTableChart";
 
 
 
@@ -25,7 +26,9 @@ export class Main {
         require('../data/EnergyData-2021-7.json'),
         require('../data/EnergyData-2021-8.json'),
         require('../data/EnergyData-2021-9.json'),
-        require('../data/EnergyData-2021-10.json')
+        require('../data/EnergyData-2021-10.json'),
+        require('../data/EnergyData-2021-11.json'),
+        require('../data/EnergyData-2021-12.json')
     ]
 
     charts: Array<EnergyChart> = [];
@@ -60,7 +63,8 @@ export class Main {
         });
     }
     private showGraph() {
-        this.charts.push(new EnergyProductionChart($('#energyProductionLine'), this.aggregatedData));
+        this.charts.push(new EnergyProductionChart($('#energyProductionLine'), this.aggregatedData))
+        this.charts.push(new EnergyTableChart($('#carbon-intensity-table'), this.aggregatedData))
     }
 
     private showCharts() {

@@ -49,7 +49,6 @@ export class EnergyProductionChart extends EnergyChart {
     }
 
     getData(): any {
-        console.log('in get Data');
         return {
             labels: this.labelTimes,
             datasets: [{
@@ -109,25 +108,17 @@ export class EnergyProductionChart extends EnergyChart {
         }
     }
 
-    multiply(datasetLabel: string, factor: number) {
-        console.log(this.aggregatedData[0][Utils.keyForLabel('Wind')]);
-        let newMutatedData = [];
-        for(let month in this.aggregatedData) {
-            let newMonth = [];
-            for(let set in this.aggregatedData[month]) {
-                if(set == Utils.keyForLabel(datasetLabel)) {
-                    newMonth[set] = this.aggregatedData[month][set].map((value) => value * factor);
-                } else {
-                    newMonth[set] = this.mutatedData[month][set];
-                }
-            }
-            newMutatedData.push(newMonth);
-        }
-        this.mutatedData = newMutatedData;
-        this.changeMonth(this.currentMonth);
-    }
-
     getChartType(): string {
         return 'line';
+    }
+
+    changeMonth(month: number) {
+        this.currentMonth = month;
+        this.chart.data.datasets = this.chart.data.datasets.map((dataset) => {
+            let labelKey = Utils.keyForLabel(dataset.label);
+            dataset.data = EnergyChart.mutatedData[month - 1][labelKey];
+            return dataset;
+        });
+        this.chart.update();
     }
 }

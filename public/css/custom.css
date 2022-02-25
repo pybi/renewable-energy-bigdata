@@ -48,3 +48,35 @@ canvas{
 .headerBgImage {
   background-image: url('https://images.unsplash.com/photo-1548337138-e87d889cc369?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2392&q=80');
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+}
+
+thead {
+  border-bottom-color: black;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+th {
+  width: 7.69%;
+  text-align: center;
+}
+
+td:first-child {
+  border-right-color: black;
+  border-right-width: 1px;
+  border-right-style: solid;
+  text-align: start;
+}
+
+tbody td {
+  text-align: end;
+}
+
+thead th {
+  font-size: small;
+}

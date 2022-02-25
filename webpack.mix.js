@@ -14,5 +14,5 @@ const mix = require('laravel-mix');
 mix.ts('resources/ts/main.ts', 'public/js/main.js');
 mix.js('resources/js/plugins.js', 'public/js/plugins.js')
 mix.js('resources/js/vendor/modernizr-3.11.2.min.js', 'public/js/vendor/modernizr-3.11.2.min.js')
-mix.js('resources/js/app.jsx', 'public/js').react();
+//mix.js('resources/js/app.jsx', 'public/js').react();
 mix.copyDirectory('resources/data', 'public/data')

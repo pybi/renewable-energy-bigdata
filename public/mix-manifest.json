@@ -1,0 +1,13 @@
+{
+    "/js/bootstrap.bundle.min.js": "/js/bootstrap.bundle.min.js",
+    "/js/template.js": "/js/template.js",
+    "/js/app.js": "/js/app.js",
+    "/js/editing.js": "/js/editing.js",
+    "/js/start.js": "/js/start.js",
+    "/css/start.css": "/css/start.css",
+    "/css/template.css": "/css/template.css",
+    "/css/app.css": "/css/app.css",
+    "/css/printer.css": "/css/printer.css",
+    "/css/pages.css": "/css/pages.css",
+    "/css/editing.css": "/css/editing.css"
+}

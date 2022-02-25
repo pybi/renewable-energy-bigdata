@@ -7,15 +7,34 @@ export abstract class EnergyChart {
 
     labelTimes = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
     currentMonth: number = 1;
-    aggregatedData = [];
-    mutatedData = [];
+    static aggregatedData = [];
+    static mutatedData: Array<any> = [];
     chart: Chart = null;
     titleText = '';
+    $ctx = null;
     constructor(ctx: JQuery<HTMLElement>, aggregatedData: Array<any>) {
-        this.aggregatedData = aggregatedData;
-        this.mutatedData = aggregatedData;
-        //@ts-ignore
-        this.chart = new Chart(ctx, this.getConfig());
+        EnergyChart.aggregatedData = aggregatedData;
+        EnergyChart.mutatedData = aggregatedData;
+        this.$ctx = ctx;
+        if (this.getChartType() != 'table') {
+            //@ts-ignore
+            this.chart = new Chart(ctx, this.getConfig());
+        } else {
+            this.customChart();
+        }
+    }
+
+    customChart() {};
+
+    static getMaxFor(column: string) {
+        let max = 0;
+        this.aggregatedData.forEach((month, index) => {
+            month[column].forEach((element) => {
+                max = element > max ? element : max;
+            })
+        });
+        console.log(max);
+        return max;
     }
 
     abstract getChartType(): string;
@@ -25,8 +44,6 @@ export abstract class EnergyChart {
     abstract getXScale();
 
     abstract getYScale();
-
-    abstract multiply(datasetLabel, factor);
 
     private getOptions() {
         return {
@@ -63,14 +80,22 @@ export abstract class EnergyChart {
          }
     }
 
-    changeMonth(month: number) {
-        this.currentMonth = month;
-        this.chart.data.datasets = this.chart.data.datasets.map((dataset) => {
-            let labelKey = Utils.keyForLabel(dataset.label);
-            dataset.data = this.mutatedData[month - 1][labelKey];
-            return dataset;
-        });
-        this.chart.update();
-    }
+    abstract changeMonth(month: number): void;
 
+    multiply(datasetLabel: string, factor: number) {
+        let newMutatedData = [];
+        for(let month in EnergyChart.aggregatedData) {
+            let newMonth = [];
+            for(let set in EnergyChart.aggregatedData[month]) {
+                if(set == Utils.keyForLabel(datasetLabel)) {
+                    newMonth[set] = EnergyChart.aggregatedData[month][set].map((value) => value * factor);
+                } else {
+                    newMonth[set] = EnergyChart.mutatedData[month][set];
+                }
+            }
+            newMutatedData.push(newMonth);
+        }
+        EnergyChart.mutatedData = newMutatedData;
+        this.changeMonth(this.currentMonth);
+    }
 }
