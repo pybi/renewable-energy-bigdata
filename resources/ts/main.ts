@@ -81,7 +81,7 @@ export class Main {
         let html = '';
         Utils.getLabels().forEach((label) => {
             html = html.concat(`<div class="col"> <label for="range-${label}" class="form-label">Elecricity produced in Germany by ${label}: <span id="range-${label}-display">100%</span></label> 
-                        <input type="range" class="form-range range" min="0" max="3" step="0.01" value="1" id="range-${label}" alt="1"> </div>`)
+                        <input type="range" class="form-range range w-full h-2 bg-blue-100 appearance-none" min="0" max="3" step="0.01" value="1" id="range-${label}" alt="1"> </div>`)
         })
         $('.sliders').html(html);
     }

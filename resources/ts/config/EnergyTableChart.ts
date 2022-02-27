@@ -5,7 +5,7 @@ import {Colors} from "../Colors";
 import {data} from "jquery";
 import {Utils} from "../Utils";
 let _ = require('lodash');
-import hexToRgba from 'hex-to-rgba';
+// import hexToRgba from 'hex-to-rgba';
 
 
 export class EnergyTableChart extends EnergyChart {
