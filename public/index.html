@@ -1277,7 +1277,9 @@
      <h4 class="mb-4 mt-4 font-semibold text-gray-600">
       Elektizität pro Sektor:
     </h4>
-      <div class="row row-cols-2 sliders">
+      <!-- <div class="row row-cols-2 sliders">
+      </div> -->
+      <div class="sliders grid gap-4 grid-cols-4 bg-gray-200 rounded-xl p-2 space-x-2 w-full" x-data="app">
       </div>
     </div>
     </div>
@@ -1452,7 +1454,7 @@
 
 
  <div class="container">
-   <div class="lg:justify-center mt-16">
+   <div class="lg:justify-center my-16">
        <div class="bg-gray-100 lg:mx-8 lg:flex lg:max-w lg:shadow-lg lg:rounded-lg">
            <div class="lg:w-2/3 p-4">
             <iframe title="" aria-label="Karte" id="datawrapper-chart-9bDH6" src="https://datawrapper.dwcdn.net/9bDH6/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="683"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
@@ -1492,7 +1494,7 @@
   </div> -->
 
   <div class="container">
-   <div class="lg:justify-center mt-16">
+   <div class="lg:justify-center my-16">
        <div class="bg-gray-100 lg:mx-8 lg:flex lg:max-w lg:shadow-lg lg:rounded-lg">
            <div class="lg:w-2/3">
                <img class="h-64 bg-cover lg:rounded-lg lg:h-full" src="assets/CarbonIntensity.png"></img>
@@ -1511,96 +1513,49 @@
 </div>
 
 
-<div class="flex items-center justify-center">
-  
-   <card class="w-full md:w-3/4 bg-white mx-4 align-center">
-      <h2 class="mt-8 mb-2 text-3xl text-gray-800 font-bold">Battery Charge</h2>
+
+ <div class="container">
+   <div class="lg:justify-center mt-16">
+      <h2 class="mt-8 mb-2 text-3xl text-gray-800 font-bold">Batterien als Zwischenspeicher für mehr Stabilität im Netz</h2>
       <div class="h-1 w-20 bg-indigo-500 rounded"></div>
-      <div class="grid grid-cols-2 gap-6 mb-2 lg:grid-cols-3">
+      <div class="grid grid-cols-2 gap-6 mb-2">
+         <div class="min-w-0 p-4">
+            <h4 class="mb-4 mt-4 font-semibold text-gray-600">
+               Laden der Zwischenspeicher
+             </h4>
+            <img class="h-64 bg-cover lg:rounded-lg lg:h-full" src="assets/Storage.png"></img>
+         </div>
+         <div class="min-w-0 p-4">
+            <h4 class="mb-4 mt-4 font-semibold text-gray-600">
+               Entladen der Zwischenspeicher
+             </h4>
+            <img class="h-64 bg-cover lg:rounded-lg lg:h-full" src="assets/Discharge.png"></img>
+         </div>
+       </div>
+
+
+       <div class="grid grid-cols-2 gap-6 mb-2 lg:grid-cols-3 mt-16">
          <div class="min-w-0 p-4 col-span-2">
             <p class="text-lg text-gray-700">
-               Eine andere Quelle für den Gewinn erneuerbarer Energie ist Solarstrom.
-               Diese kann derzeit noch nicht mit der produzierten Energiemenge aus Windkraft mithalten, doch dies könnte sich in naher Zukunft ändern.
-               Denn im Vergleich zum Vorjahr, wurde im Jahre 2020 10% mehr Energie durch Photovoltaikanlagen gewonnen und im Vergleich zu 2015 besteht sogar ein Wachstum von über 30%. <br/><br/>
+               Doch haben erneuerbare Energieträger, wie Wind- und Solarenergie, einen bedeutenden Nachteil im Vergleich zu konventionellen Energieträgern: es gibt keine geeigneten Energiespeicher. Auch wenn konventionelle Energiequellen endlich sind und die Umwelt und das Klima belasten, produzieren sie rund um die Uhr und ganzjährig Energie. Des Weiteren können Kohle, Erdgas und Erdöl ohne weitere Probleme gelagert werden. Dies ist bei den erneuerbaren Energien leider noch nicht der Fall. Aber ohne die Einführung eines leistungsfähigen Stromspeichers wird es keine Energiewende geben, da die Stromproduktion von erneuerbaren Energien zu sehr von Wettergegebenheiten abhängt und so immer auf die fossilen Energieträger zurückgegriffen werden muss.
               </p>
          </div>
          <div class="min-w-0 p-4 flex justify-center items-center">
             <img
             class="w-80 ml-8"
-            src="./assets/Sun-cloud.png"
+            src="./assets/storage.jpg"
             />
          </div>
        </div>
 
-       <div class="grid grid-cols-2 gap-6 mb-8 lg:grid-cols-3">
-         <div class="min-w-0 p-4 flex justify-center items-center">
-            <img
-            class="w-80 mr-8"
-            src="./assets/Solar-Illustration.jpg"
-            />
-         </div>
-         <div class="min-w-0 p-4 col-span-2">
-            <p class="text-lg text-gray-700">
-               Aber der wichtigste Faktor für das kontinuierliche Wachstum von Solarenergie ist, dass der weitere Ausbau nicht, so wie bei Windenergie, durch strenge Bedingungen verlangsamt wird, sondern durch staatliche Maßnahmen unterstützt wird. So sollen ab 2023 Neubauten standardmäßig mit Solardächern ausgerüstet werden. Zusammen mit Energiestandard sollen neue Gebäude somit weniger Strom verbrauchen und dies treibt gleichzeitig die produzierte Menge an Solarenergie an.<br/><br/>
-         
-               Ob Deutschland wirklich mehr auf Solarenergie als Windenergie setzen möchte, oder noch andere Regelungen zur Unterstützung anderer erneuerbarer Energieträger kommen, steht jedoch noch nicht fest. Eine Problematik bei Solarstrom ist die Speicherung des am Tag produzierten Stroms für die Nacht.   
-            </p>
-         </div>
-         
-       </div>
+
+   </div>
+</div>
 
 
-   </card>
-   
- </div>
-
-
-
-
-
-
-
-
-
-  <div class="container">
-        <div class="lg:justify-center mt-16">
-            <div class="bg-gray-100 lg:mx-8 lg:flex lg:max-w lg:shadow-lg lg:rounded-lg">
-                <div class="py-12 px-6 max-w-xl lg:max-w-5xl lg:w-1/3">
-                    <h2 class="text-3xl text-gray-800 font-bold">Battery Charge by hour</h2>
-                    <p class="mt-4 text-gray-600">Explainer: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem modi reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim expedita aperiam mollitia iure consectetur dicta tenetur, porro consequuntur saepe accusantium consequatur.</p>
-                    <div class="mt-8">
-                        <a href="#" class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Read more</a>
-                    </div>
-                </div>
-                <div class="lg:w-2/3">
-                    <img class="h-64 bg-cover lg:rounded-lg lg:h-full" src="assets/Storage.png"></img>
-                </div>
-            </div>
-
-        </div>
-  </div>
-
-    <div class="container">
-          <div class="lg:justify-center mt-16">
-              <div class="bg-gray-100 lg:mx-8 lg:flex lg:max-w lg:shadow-lg lg:rounded-lg">
-                  <div class="lg:w-2/3">
-                      <!-- /<div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://images.unsplash.com/photo-1497493292307-31c376b6e479?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80')"></div> -->
-                      <img class="h-64 bg-cover lg:rounded-lg lg:h-full" src="assets/Discharge.png"></img>
-                  </div>
-                  <div class="py-12 px-6 max-w-xl lg:max-w-5xl lg:w-1/3">
-                      <h2 class="text-3xl text-gray-800 font-bold">Battery discharge by hour</h2>
-                      <p class="mt-4 text-gray-600">Explainer: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem modi reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim expedita aperiam mollitia iure consectetur dicta tenetur, porro consequuntur saepe accusantium consequatur.</p>
-                      <div class="mt-8">
-                          <a href="#" class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Read more</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-    </div>
-
-   <div class="flex flex-wrap -mx-4 mt-8">
+   <div class="flex flex-wrap -mx-4 mt-16">
       <div class="w-full px-4">
-         <div class="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
+         <div class="text-center mx-auto mb-[60px] lg:mb-20 max-w-[810px]">
             <h2
                class="
                font-bold

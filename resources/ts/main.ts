@@ -80,8 +80,7 @@ export class Main {
     private setUpSliders() {
         let html = '';
         Utils.getLabels().forEach((label) => {
-            html = html.concat(`<div class="col"> <label for="range-${label}" class="form-label">Elecricity produced in Germany by ${label}: <span id="range-${label}-display">100%</span></label> 
-                        <input type="range" class="form-range range w-full h-2 bg-blue-100 appearance-none" min="0" max="3" step="0.01" value="1" id="range-${label}" alt="1"> </div>`)
+            html = html.concat(`<div><label for="range-${label}" class="font-semibold block text-md font-medium text-gray-800">${label} - <span id="range-${label}-display">100%</span></label><input class="rounded-lg overflow-hidden appearance-none bg-gray-400 h-3 w-full range" id="range-${label}" type="range" min="0" max="3" max="100" step="0.01" value="1" /></div>`)
         })
         $('.sliders').html(html);
     }

@@ -145,24 +145,38 @@
    </div>
 </div>
 
-<div class="font-semibold p-2">
-   <span class="text-gray-800 mr-4 min-w-42">Kohle</span>
-   <input class="rounded-lg overflow-hidden appearance-none bg-gray-400 h-3 w-128" type="range" min="1" max="100" step="1" value="15" />
-</div>
-<div class="font-semibold p-2">
-   <span class="text-gray-800 mr-4 min-w-42">Nuklear</span>
-   <input class="rounded-lg overflow-hidden appearance-none bg-gray-400 h-3 w-128" type="range" min="1" max="100" step="1" value="15" />
+<div class="col"> <label for="range-${label}" class="form-label">Elecricity produced in Germany by ${label}: <span id="range-${label}-display">100%</span></label> 
+   <input type="range" class="form-range range w-full h-2 bg-blue-100 appearance-none" min="0" max="3" step="0.01" value="1" id="range-${label}" alt="1"> </div>
+
+
+<div class="grid gap-4 grid-cols-4 bg-gray-200 rounded-xl p-2 space-x-2 w-full" x-data="app">
+   <div>
+      <label for="range-${label}" class="font-semibold block text-md font-medium text-gray-800">${label} - <span id="range-${label}-display">100%</span></label>
+      <input class="rounded-lg overflow-hidden appearance-none bg-gray-400 h-3 w-full" id="range-${label}" type="range" min="0" max="3" max="100" step="0.01" value="1" />
+   </div>
+   <div>
+      <label class="font-semibold block text-md font-medium text-gray-800">Kohle - <span id="range-${label}-display">100%</span></label>
+      <input class="rounded-lg overflow-hidden appearance-none bg-gray-400 h-3 w-full" type="range" min="0" max="3" max="100" step="0.01" value="1" />
+   </div>
+   <div>
+      <label class="font-semibold block text-md font-medium text-gray-800">Kohle - <span id="range-${label}-display">100%</span></label>
+      <input class="rounded-lg overflow-hidden appearance-none bg-gray-400 h-3 w-full" type="range" min="0" max="3" max="100" step="0.01" value="1" />
+   </div>
+   <div>
+      <label class="font-semibold block text-md font-medium text-gray-800">Kohle - <span id="range-${label}-display">100%</span></label>
+      <input class="rounded-lg overflow-hidden appearance-none bg-gray-400 h-3 w-full" type="range" min="0" max="3" max="100" step="0.01" value="1" />
+   </div>
 </div>
 
-<div>
-   <label for="about" class="font-semibold block text-md font-medium text-gray-800"> Kohle </label>
-   <input class="rounded-lg overflow-hidden appearance-none bg-gray-400 h-3 w-128" type="range" min="1" max="100" step="1" value="15" />
- </div>
+
 
 <div class="col"> <label for="range-${label}" class="form-label">Elecricity produced in Germany by ${label}: <span id="range-${label}-display">100%</span></label> 
-   <!-- <input type="range" class="form-range range w-full h-2 bg-blue-100 appearance-none" min="0" max="3" step="0.01" value="1" id="range-${label}" alt="1"> </div> -->
-  <div class="row row-cols-2 sliders">
-  </div>
+   <input type="range" class="form-range range rounded-lg overflow-hidden appearance-none bg-gray-400 h-3 w-128" min="0" max="3" step="0.01" value="1" id="range-${label}" alt="1"> </div>
+  
+   <div class="row row-cols-2 sliders">
+</div>
+
+
 </div>
 </div>
 </section>
