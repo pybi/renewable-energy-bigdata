@@ -7,4 +7,5 @@ export class Colors {
     static gas: string = "#D1D5DB"
     static nuclear: string = "#34D399"
     static import: string = '#EDE9FE'
+    static consumption: string = '#d90909'
 }

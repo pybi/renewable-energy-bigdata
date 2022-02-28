@@ -30,7 +30,7 @@ export class EnergyProductionChart extends EnergyChart {
 
     getYScale() {
         return {
-            stacked: true,
+            //stacked: true,
             gridLines: {
                 display: false,
             },
@@ -56,7 +56,9 @@ export class EnergyProductionChart extends EnergyChart {
                 borderColor: Colors.nuclear,
                 data: [],
                 fill: true,
-                backgroundColor: Colors.nuclear
+                backgroundColor: Colors.nuclear,
+                stack: "prod",
+                order: 2
             }, {
                 data: [],
                 label: "Coal",
@@ -64,46 +66,67 @@ export class EnergyProductionChart extends EnergyChart {
                 fill: true,
                 cubicInterpolationMode: 'monotone',
                 tension: 0.4,
-                backgroundColor: Colors.coal
+                backgroundColor: Colors.coal,
+                stack: "prod",
+                order: 2
             }, {
                 data: [],
                 label: "Gas",
                 borderColor: Colors.gas,
                 fill: true,
-                backgroundColor: Colors.gas
+                backgroundColor: Colors.gas,
+                stack: "prod",
+                order: 2
+
             }, {
                 data: [],
                 label: "Wind",
                 borderColor: Colors.wind,
                 fill: true,
-                backgroundColor: Colors.wind
+                backgroundColor: Colors.wind,
+                stack: "prod",
+                order: 2
 
             }, {
                 data: [],
                 label: "Solar",
                 borderColor: Colors.solar,
                 fill: true,
-                backgroundColor: Colors.solar
+                backgroundColor: Colors.solar,
+                stack: "prod",
+                order: 2
 
             }, {
                 data: [],
                 label: "Biomass",
                 borderColor: Colors.biomass,
                 fill: true,
-                backgroundColor: Colors.biomass
+                backgroundColor: Colors.biomass,
+                stack: "prod",
+                order: 2
+
             }, {
                 data: [],
                 label: "Hydro",
                 borderColor: Colors.hydro,
                 fill: true,
-                backgroundColor: Colors.hydro
+                backgroundColor: Colors.hydro,
+                stack: "prod",
+                order: 2
 
             }, {
                 label: 'Import',
                 borderColor: Colors.import,
                 data: [],
                 fill: true,
-                backgroundColor: Colors.import
+                backgroundColor: Colors.import,
+                stack: "prod",
+                order: 2
+            }, {
+                label: 'Consumption',
+                data: [],
+                borderColor: Colors.consumption,
+                order: 1
             }]
         }
     }

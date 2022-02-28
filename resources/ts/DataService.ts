@@ -25,6 +25,7 @@ export class DataService {
             }
             aggregatedData.push(monthData);
         }
+        console.log(aggregatedData);
         return aggregatedData;
     }
 

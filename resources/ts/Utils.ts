@@ -10,6 +10,7 @@ export class Utils {
             case 'Hydro': labelKey = 'power_production_hydro_avg'; break;
             case 'Nuclear': labelKey = 'power_production_nuclear_avg'; break;
             case 'Import': labelKey = 'total_import_avg'; break;
+            case 'Consumption': labelKey = 'total_consumption_avg'; break;
             default: console.log('Oho ein Fehler');
         }
         return labelKey

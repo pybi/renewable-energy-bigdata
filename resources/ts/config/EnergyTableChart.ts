@@ -39,14 +39,19 @@ export class EnergyTableChart extends EnergyChart {
         for(let i = 0; i < 24; i++) {
             $tbody.append(`<tr><td>${i}</td></tr>`);
         }
+        let color = '#FF0000'
+        if(this.$ctx.data('segment') == "Solar") {
+            color = Colors.solar;
+        } else {
+            color = Colors.wind;
+        }
         EnergyChart.mutatedData.forEach((month, index) => {
            let segmentData: Array<number> = month[segment];
            segmentData.forEach((value, hour) => {
                let $tr = $tbody.find('tr').eq(hour);
                $tr.append(`<td>${Math.round(value).toLocaleString()}</td>`);
                let alpha = `0${Math.round(((value/EnergyChart.getMaxFor(segment)) * 255)/3).toString(16)}`.slice(-2);
-               $tr.children().last().css('background-color', Colors.solar + alpha);
-               console.log(alpha);
+               $tr.children().last().css('background-color', color + alpha);
            })
         });
     }

@@ -64,7 +64,8 @@ export class Main {
     }
     private showGraph() {
         this.charts.push(new EnergyProductionChart($('#energyProductionLine'), this.aggregatedData))
-        this.charts.push(new EnergyTableChart($('#carbon-intensity-table'), this.aggregatedData))
+        this.charts.push(new EnergyTableChart($('#solar-production-table'), this.aggregatedData))
+        this.charts.push(new EnergyTableChart($('#wind-production-table'), this.aggregatedData))
     }
 
     private showCharts() {
