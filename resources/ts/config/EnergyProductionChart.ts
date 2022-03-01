@@ -142,6 +142,32 @@ export class EnergyProductionChart extends EnergyChart {
             dataset.data = EnergyChart.mutatedData[month - 1][labelKey];
             return dataset;
         });
+        console.log("OOOOO");
+        console.log(this.chart.data);
+        this.getTotalEnergyValues(this.chart.data.datasets);
+
         this.chart.update();
+    }
+
+
+    getTotalEnergyValues(chartDataset){
+        var totalProduction = 0;
+        var totalConsumption = 0;
+
+        chartDataset.forEach(element => {
+            if(element.label != "Consumption"){
+                element.data.forEach(hours => {
+                    totalProduction += hours;
+                });
+            } else {
+                element.data.forEach(consumptionVals => {
+                    totalConsumption += consumptionVals;
+                });
+            }
+        });
+
+        var percentage = Math.round((100 * totalProduction) / totalConsumption);
+        $('#mapUnderlayColor').height(percentage+"%");
+        $('#prozentEnergie').html(percentage+"%");
     }
 }

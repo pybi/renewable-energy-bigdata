@@ -56,12 +56,14 @@ export class Main {
         $('.range').on('change', (e, v) => {
             let element = $(e.target);
             let energyType = element.attr('id').split('-').pop();
-            console.log(element.closest('label'));
-            element.prev().children().first().html(Number(element.val()) * 100 + "%")
+            // console.log(element.closest('label'));
+            element.prev().children().first().html(Math.round(Number(element.val()) * 100) + "%")
             this.charts.map((chart) => chart.multiply(energyType, Number(element.val())));
             element.attr('alt', Number(element.val()));
         });
+        
     }
+
     private showGraph() {
         this.charts.push(new EnergyProductionChart($('#energyProductionLine'), this.aggregatedData))
         this.charts.push(new EnergyTableChart($('#solar-production-table'), this.aggregatedData))

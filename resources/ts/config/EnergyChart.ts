@@ -37,6 +37,18 @@ export abstract class EnergyChart {
         return max;
     }
 
+    // private getTotal() {
+    //     let value = EnergyChart.mutatedData;
+    //     console.log("FINAL VALUE");
+    //     console.log(value);
+    // }
+
+    // private updateTotal() {
+    //     let value = EnergyChart.mutatedData;
+    //     console.log("FINAL VALUE");
+    //     console.log(value);
+    // }
+
     abstract getChartType(): string;
 
     abstract getData();

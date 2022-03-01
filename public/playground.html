@@ -34,7 +34,28 @@
    "
    >
 
+   <div class="container">
+      <div class="grid grid-cols-2 gap-6 mb-8 lg:grid-cols-3">
+         <div class="min-w-0 p-4 flex justify-center items-center">
+            <div class="relative">
+               <img
+               id="mapDottet"
+               class="w-80 mr-8 z-20 relative"
+               src="./assets/germany-dottet.png"
+               />
+               <div id="mapUnderlayColor" class=" bg-blue-500 z-10 absolute bottom-0 w-full"></div> <!-- Colored Underlay -->
+               <div class="bg-gray-100 z-0 absolute bottom-0 w-full h-full"></div> <!-- Gray Underlay -->
+            </div>
+         </div>
+         <div class="min-w-0 p-4 col-span-2">
+            <h2 class="text-3xl text-gray-800 font-bold">Ist der Energiebedarf abgedeckt?</h2>
 
+            <p class="text-lg text-gray-700">
+               Doch aufgrund von Lärmbeschwerden von Anwohnern und Risikobedenken von Umweltverbänden, haben sich die Bedingungen für den Bau von Windkraftanlagen verschärft und die Genehmigungszeiten für Bauaufträge werden immer länger. Dadurch kommt der Ausbau von Windenergie in dem letzten Jahr nur noch stockend voran und der Zuwachs ist gesunken.<br><br>
+            </p>
+         </div>
+      </div>
+    </div>
 
 <div class="container">
 <div class="w-full mb-6 lg:mb-0">
@@ -44,6 +65,8 @@
 <div class="chartWrapper">
   <canvas id="energyProductionLine" width="800" height="350"></canvas>
 </div>
+
+
 
 <div class="container">
   <div class="grid grid-cols-4 md:grid-cols-6 xl:grid-cols-12 bg-gray-200 rounded-xl p-2 space-x-2 w-full" x-data="app">
@@ -135,7 +158,7 @@
  <h4 class="mb-4 mt-4 font-semibold text-gray-600">
   Elektizität pro Sektor:
 </h4>
-<div class="grid grid-cols-4 bg-gray-200 rounded-xl p-2 space-x-2 w-full" x-data="app">
+<!-- <div class="grid grid-cols-4 bg-gray-200 rounded-xl p-2 space-x-2 w-full" x-data="app">
    <div>
        <input type="radio" name="month" value="1" id="month-radio-1" class="peer month-radio" checked hidden />
        <label for="month-radio-1"
@@ -174,7 +197,7 @@
    <input type="range" class="form-range range rounded-lg overflow-hidden appearance-none bg-gray-400 h-3 w-128" min="0" max="3" step="0.01" value="1" id="range-${label}" alt="1"> </div>
   
    <div class="row row-cols-2 sliders">
-</div>
+</div> -->
 
 
 </div>
