@@ -19,4 +19,25 @@ export class Utils {
     static getLabels(): Array<string> {
         return ['Coal', 'Gas', 'Wind', 'Solar', 'Biomass', 'Hydro', 'Nuclear', 'Import']
     }
+
+    static germanLabel(label: string): string {
+        switch (label) {
+            case 'Coal':
+                return 'Kohle'
+            case 'Gas':
+                return 'Gas'
+            case 'Wind':
+                return 'Wind'
+            case 'Solar':
+                return 'Solar'
+            case 'Biomass':
+                return 'Biomasse'
+            case 'Hydro':
+                return 'Wasserkraft'
+            case 'Nuclear':
+                return 'Atomkraft'
+            case 'Import':
+                return 'Import'
+        }
+    }
 }

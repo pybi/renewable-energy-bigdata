@@ -80,3 +80,7 @@ tbody td {
 thead th {
   font-size: small;
 }
+
+ol > li {
+  display: list-item !important;
+}
